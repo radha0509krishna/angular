@@ -1,0 +1,19 @@
+<style>
+span{
+  color: aliceblue;
+  font-size: large;
+}
+</style>
+<form [formGroup]="myform">
+  <div style="font-size:x-large">
+    username: <input FormControlName = "username">
+    <span *ngIf = "myform.controls.username.invalid">enter username</span>
+    <br>
+    password : <input FormControlName = "password">
+    <span *ngIf= "myform.controls.password.invalid">enter password</span>
+    <br>
+    <button mat-raised-button color="primary" (click) ="authenticate()">login</button>
+    <br>
+    {{msg}}
+  </div>
+</form>
